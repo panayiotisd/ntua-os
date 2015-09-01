@@ -1,0 +1,31 @@
+execve("./whoops", ["./whoops"], [/* 17 vars */]) = 0
+[ Process PID=22041 runs in 32 bit mode. ]
+brk(0)                                  = 0x9762000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xfffffffff7704000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=38829, ...}) = 0
+mmap2(NULL, 38829, PROT_READ, MAP_PRIVATE, 3, 0) = 0xfffffffff76fa000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib32/libc.so.6", O_RDONLY)      = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\0n\1\0004\0\0\0\374"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1327556, ...}) = 0
+mmap2(NULL, 1337704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xfffffffff75b3000
+mprotect(0xf76f3000, 4096, PROT_NONE)   = 0
+mmap2(0xf76f4000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x140) = 0xfffffffff76f4000
+mmap2(0xf76f7000, 10600, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xfffffffff76f7000
+close(3)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xfffffffff75b2000
+set_thread_area(0xffae66d8)             = 0
+open("/dev/urandom", O_RDONLY)          = 3
+read(3, "\262\226\273"..., 3)           = 3
+close(3)                                = 0
+mprotect(0xf76f4000, 8192, PROT_READ)   = 0
+mprotect(0xf7723000, 4096, PROT_READ)   = 0
+munmap(0xf76fa000, 38829)               = 0
+open("/etc/shadow", O_RDONLY)           = -1 EACCES (Permission denied)
+write(2, "Problem!\n"..., 9Problem!
+)            = 9
+exit_group(1)                           = ?
